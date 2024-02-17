@@ -1,0 +1,163 @@
+
+.cursor{
+    cursor: pointer;
+}
+.mrgRight{
+    margin-right: 100px;
+}
+
+/* start list Design */
+.ItemDesign{
+    width: 188px;
+    border: 1px solid #EBD9B4;
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+    margin-right: 28px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.align_item{
+    align-items: center;
+}
+.card_bg_color{
+    background: #F9EFDB;
+    border-radius: 10px;
+}
+.sale_design{
+    padding: 24px;
+    font-family: 'Poppins';
+}
+.desc_mrg_top{
+    margin: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Poppins';
+}
+
+@media (min-width:320px)  {  
+    .display_flex{
+        display: flex;
+        flex-direction: column;
+    }    
+    .listDesign{
+        border-radius: 11px;
+        padding: 18px;
+    }
+    .listStyle{
+        overflow-y: scroll;
+        max-height: 300px;
+        height: 10%;
+    }
+    .scrollDisbale{
+        overflow-y: scroll;
+        max-height: 430px;
+        height: 10%;
+    }
+} 
+@media (min-width:481px)  {  
+    .display_flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .listDesign{
+        border-radius: 11px;
+        padding: 18px;
+    }
+    .listStyle{
+        overflow-y: scroll;
+        max-height: 300px;
+        height: 10%;
+    }
+    .scrollDisbale{
+        overflow-y: scroll;
+        max-height: 430px;
+        height: 10%;
+    }
+} 
+@media (min-width:641px)  {  
+    .display_flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .listDesign{
+        border-radius: 11px;
+        padding: 18px;
+    }
+    .listStyle{
+        overflow-y: scroll;
+        max-height: 300px;
+        height: 10%;
+    }
+    .scrollDisbale{
+        overflow-y: scroll;
+        max-height: 430px;
+        height: 10%;
+    }
+} 
+@media (min-width:961px)  {  
+    .display_flex{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .listDesign{
+        border: 1px solid black;
+        border-radius: 11px;
+        padding: 18px;
+    }
+    .listStyle{
+        overflow-y: scroll;
+        max-height: 300px;
+        height: 10%;
+    }
+    .scrollDisbale{
+        overflow-y: hidden;
+    }
+} 
+@media (min-width:1025px) {  
+    .display_flex{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .listDesign{
+        border: 1px solid black;
+        border-radius: 11px;
+        padding: 18px;
+    }
+    .listStyle{
+        overflow-y: scroll;
+        max-height: 300px;
+        height: 10%;
+    }
+    .scrollDisbale{
+        overflow-y: hidden;
+    }
+} 
+@media (min-width:1281px) {  
+    .display_flex{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .listDesign{
+        border: 1px solid black;
+        border-radius: 11px;
+        padding: 18px;
+    }
+    .listStyle{
+        overflow-y: scroll;
+        max-height: 300px;
+        height: 10%;
+    }
+    .scrollDisbale{
+        overflow-y: hidden;
+    }
+}
+
+/* end list Design */

@@ -1,0 +1,39 @@
+.btnStyle{
+    padding: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: sans-serif;
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: #848884;
+    color: white;
+    cursor: pointer;
+}
+.createBtns{
+    margin-top: 16px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.cardDesign{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin: 20px;
+    border-radius: 25px;
+}
+.width50{
+    width: 100%;
+    /* width: 90%; */
+    padding: 1px;
+    padding-left: 40px;
+    margin-bottom: 16px;
+}
+.width10{
+    width: 20%;
+}
+.brdLeft{
+    border-right: 1px solid black;
+}

@@ -1,0 +1,13 @@
+.display{
+    display: flex;
+    flex-direction: column;
+}
+.mrgRt{
+    margin-right: 5px;
+}
+.mrgBtm{
+    margin-top: 10px;
+}
+.errorStyle{
+    font-size: 10px;
+}
