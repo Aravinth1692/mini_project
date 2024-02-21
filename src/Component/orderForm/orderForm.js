@@ -5,7 +5,6 @@ const OrderForm = ({onSubmit }) =>{
     const [orderName, setOrderName] = useState('');
     const [orderQty, setOrderQty] = useState('');
     const [error, setError] = useState(false);
-
     const handleSubmit = (e) => {
       e.preventDefault();
       if(orderName === "" || orderName === undefined){
@@ -31,6 +30,7 @@ const OrderForm = ({onSubmit }) =>{
             <input
               type="text"
               value={orderName}
+              className='borderRadius'
               onChange={(e) => setOrderName(e.target.value)}
             />
           </label>
@@ -39,6 +39,7 @@ const OrderForm = ({onSubmit }) =>{
             <input
               type="text"
               value={orderQty}
+              className='borderRadius'
               onChange={(e) => setOrderQty(e.target.value)}
             />
           </label>

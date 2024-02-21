@@ -7,33 +7,109 @@
     border: 1px solid white;
     background-color: #848884;
     color: white;
+}
+.cursor{
     cursor: pointer;
 }
 .createBtns{
     margin-top: 16px;
     margin-right: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-.cardDesign{
-    border: 1px solid black;
-    display: flex;
     flex-direction: row;
-    margin-top: 10px;
-    margin: 20px;
-    border-radius: 25px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.dropdownstyle{
+    padding: 5px;
+    border-radius: 8px;
+    margin-right: 12px;
 }
 .width50{
-    width: 100%;
-    /* width: 90%; */
+    /* width: 100%; */
+    width: 90%;
     padding: 1px;
     padding-left: 40px;
     margin-bottom: 16px;
 }
-.width10{
-    width: 20%;
-}
+
 .brdLeft{
     border-right: 1px solid black;
+}
+@media (min-width:320px)  {  
+    .width10{
+        width: 66%;
+    }
+    .cardDesign{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin: 20px;
+        border-radius: 25px;
+    }
+} 
+@media (min-width:481px)  {  
+    .width1{
+        width: 66%;
+    }
+    .cardDesign{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin: 20px;
+        border-radius: 25px;
+    }
+} 
+@media (min-width:641px)  {  
+    .width10{
+        width: 66%;
+    }
+    .cardDesign{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        margin: 20px;
+        border-radius: 25px;
+    }
+} 
+@media (min-width:961px)  {  
+    .width10{
+        width: 20%;
+    }
+    .cardDesign{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        margin: 20px;
+        border-radius: 25px;
+    }
+} 
+@media (min-width:1025px) {  
+    .width10{
+        width: 20%;
+    }
+    .cardDesign{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        margin: 20px;
+        border-radius: 25px;
+    }
+} 
+@media (min-width:1281px) {  
+    .width10{
+        width: 20%;
+    }
+    .cardDesign{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        margin: 20px;
+        border-radius: 25px;
+    }
 }
