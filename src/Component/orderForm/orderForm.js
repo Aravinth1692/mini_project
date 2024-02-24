@@ -21,12 +21,12 @@ const OrderForm = ({onSubmit }) =>{
     };
 
     return (
-      <div>
+      <div className='textaligncenter'>
         <h2>Create New Order</h2>
         <form onSubmit={handleSubmit}>
           <div className='display'>
           <label>
-           <div className='mrgRt'>Order Name: </div> 
+           <div className='mrgRt'>Order Name </div> 
             <input
               type="text"
               value={orderName}

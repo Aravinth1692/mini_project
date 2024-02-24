@@ -12,11 +12,11 @@ const Home = () => {
     const [orders, setOrders] = useState([
       ]);
       // let subtitle;
-      const [modalIsOpen, setIsOpen] = useState(false);
-      const [selectedOrder, setSelectedOrder] = useState(null);
+      const [modalIsOpen, setIsOpen] = useState(false); 
+      const [selectedOrder, setSelectedOrder] = useState(null);   //Main array
       const [noRecord,setnoRecord] = useState(true);
-      const [tableVal,setTableVal] = useState(0);
-      const [temp,setTemp] = useState([])
+      const [tableVal,setTableVal] = useState();
+      const [temp,setTemp] = useState([])     // filter array
       const customStyles = {
         content: {
           top: '50%',
@@ -25,6 +25,7 @@ const Home = () => {
           bottom: 'auto',
           marginRight: '-50%',
           transform: 'translate(-50%, -50%)',
+          width:'30%'
         },
       };
  
@@ -36,7 +37,7 @@ const Home = () => {
       const notify = () => toast.error("Please select Table");
 
       function openModal() {
-        if(tableVal == ''){
+        if(tableVal === '' || tableVal === undefined){
           notify()
           return;
         }
@@ -44,6 +45,8 @@ const Home = () => {
       }
       const onDeleteOrder = (val) =>{
         const RemoveArray = orders.filter((data)=>data.id !== val )
+        const RemoveTempArray = temp.filter((data)=>data.id !== val )
+        setTemp(RemoveTempArray)
         setOrders(RemoveArray);
       }
     
@@ -58,28 +61,30 @@ const Home = () => {
 
       const getTableName = (tableName) => {
         setTableVal(tableName)
-        GetCurrentTable(orders)
+        if(tableName === '0'){
+          setTemp(orders)
+          return
+        }
+        const currentArray = orders.filter((val)=>val.tablename === tableName);
+        
+        if(currentArray.length > 0){
+          setTemp(currentArray)
+        }
+        else{
+          setTemp([])
+        }
       }
       const handleCreateOrder = (val) => {
         const newOrder = { id: orders.length + 1, name: val.orderName ,Qty:val.orderQty,tablename:tableVal};
         setOrders([...orders, newOrder]);
+        setTemp([...temp, newOrder]);
         closeModal()
       };
-      const GetCurrentTable  =(order) => {
-        const currentArray = order.filter((val)=>val.tablename === tableVal);
-        setTemp(order)
-        if(currentArray.length > 0){
-          setOrders(currentArray)
-        }
-        else{
-          setOrders([])
-        }
-        setOrders(temp)
-      }
+      
     return (
         <div>
           <ToastContainer />
-        <Header orderCount = {orders.length} />
+        <Header orderCount = {temp.length} />
         <div className='createBtns'>
         <select className='dropdownstyle' 
         onChange={(event) => getTableName(event.target.value)}>
@@ -95,7 +100,7 @@ const Home = () => {
        
         <div className='cardDesign'>
           <div className='width50'>
-          <OrderList orders={orders} onOrderClick={handleOrderClick} onDeleteOrder={onDeleteOrder} />
+          <OrderList orders={temp} onOrderClick={handleOrderClick} onDeleteOrder={onDeleteOrder} />
           </div>
           <div className='width10'>
           <OrderDetails order={selectedOrder} noRecord={noRecord} />
